@@ -318,10 +318,9 @@ export default function ThirdSection() {
       </div>
 
       <div
-        // No ref needed here if we rely on sectionRef's BoundingClientRect to check sticky state
+        
         className="relative hidden lg:block"
-        // This min-height is crucial: it determines how long the sticky element stays stuck.
-        // Each step essentially "consumes" 100vh of scroll.
+      
         style={{ minHeight: `${(steps.length + 1) * 100}vh` }}
       >
         {/* 3. The Core Feature Section (Becomes Sticky) */}
@@ -333,17 +332,17 @@ export default function ThirdSection() {
             // Visually indicate when it's not active/stuck (e.g., fades out)
             ${isActive ? "opacity-100" : "opacity-0 pointer-events-none"}
           `}
-          initial={{ opacity: 0 }} // Start invisible, then `isActive` will control
+          initial={{ opacity: 0 }} 
           animate={{
-            opacity: isActive ? 1 : 0, // Animate based on isActive
-            scale: isExiting ? 0.98 : 1, // isExiting might need re-evaluation
+            opacity: isActive ? 1 : 0, 
+            scale: isExiting ? 0.98 : 1, 
           }}
           transition={{
             duration: 0.5,
             ease: "easeInOut",
           }}
         >
-          <div className="w-full h-full"> {/* Inner div to align content within the sticky section */}
+          <div className="w-full h-full"> 
             <div className="grid lg:grid-cols-2 gap-12 items-stretch h-full">
               {/* Left side - Steps */}
               <div className="space-y-8 flex flex-col justify-center">
@@ -451,7 +450,7 @@ export default function ThirdSection() {
                       className="w-full h-full"
                     >
                       <Image
-                        src={activeStepData.image || "/placeholder.svg"}
+                        src={activeStepData.image || ""}
                         alt={activeStepData.title}
                         width={600}
                         height={500}

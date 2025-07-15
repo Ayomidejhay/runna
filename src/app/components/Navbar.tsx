@@ -52,10 +52,10 @@ export default function Navbar() {
 
           {/* action buttons */}
           <div className="items-center gap-[10px] flex">
-            <button className="py-[12px] px-[32px] text-[1rem] border border-[#ffffff] text-bold bg-transparent   rounded-[32px]   sm:flex hidden">
+            <button className="w-[106px] h-[44px] py-[12px] px-[32px] text-[1rem] border border-[#ffffff] text-bold bg-transparent   rounded-[32px]   sm:flex hidden">
               Login
             </button>
-            <button className="py-[12px] px-[32px] text-[1rem] border border-[#ffffff] text-bold text-[#1570EF] bg-[#ffffff]   rounded-[32px]   sm:flex hidden">
+            <button className="w-[106px] h-[44px] py-[12px] px-[32px] text-[1rem] border border-[#ffffff] text-bold text-[#1570EF] bg-[#ffffff]   rounded-[32px]   sm:flex hidden">
               Sign up
             </button>
 

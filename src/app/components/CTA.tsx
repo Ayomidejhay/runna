@@ -2,48 +2,20 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-export default function Hero() {
+export default function CTA() {
   return (
-    <div>
-      <div className="relative flex" style={{ height: "calc(100vh - 80px)" }}>
-        
-        <Image
-          src="/hero.png"
-          alt="Hero Background"
-          layout="fill"
-          objectFit="cover"
-          quality={80} 
-          priority={true} 
-          className="z-0" 
-        />
+    <div id="download" className=" my-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="bg-deepblue rounded-[24px] py-14 mx-auto">
+        <div className="text-center md:w-[400px] px-3 flex flex-col gap-5 mx-auto text">
+          <p className="text-[34px] font-bold text-white">
+            Ready to Start Walking?
+          </p>
+          <p className="text-[16px] text-[#E8F1FD] ">
+            Join thousands of pet owners who are already building healthier
+            habits with their pets
+          </p>
 
-        
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/60 z-10"></div>
-
-        
-        <div className="relative z-20 max-w-[570px] overflow-hidden mx-auto px-4 sm:px-6 flex items-center justify-center text-center text-[15px]">
-          <div className="flex flex-col gap-4 md:gap-8">
-            <span className="text-[#ffffff] text-[40px] md:text-5xl">
-              <p className="font-bold">
-                Wellness for You. <br /> Wellness for Your Pet.
-              </p>
-            </span>
-            <p className="text-[14px] md:text-[16px] text-[#ffffff] mx-auto">
-              With Runnars, every step, sip, or stretch becomes a chance to grow
-              closer to your pet, improve your health, and earn real-life
-              rewards — in challenges built just for pet lovers.
-            </p>
-            <div className="bg-[#1570EF] w-full  md:w-[222px] flex items-center justify-center h-11 mx-auto  rounded-[24px]">
-              <Link
-                
-                href="/signup"
-              >
-                Get Started For <span className="font-bold">FREE</span>
-              </Link>
-            </div>
-            <div>
-              <p className="text-[12px] mb-2">Available in iOS and Android</p>
-              <div className="flex items-center justify-center space-x-6">
+          <div className="flex items-center justify-center space-x-6">
                 <Link
                   href=""
                   className=" bg-[#ffffff] text-[#1B1E21] w-40 flex items-center justify-center h-11 font-medium rounded-[8px] transition-colors shadow-lg hover:shadow-xl transform hover:translate-y-1"
@@ -79,11 +51,8 @@ export default function Hero() {
                   </div>
                 </Link>
               </div>
-            </div>
-          </div>
         </div>
       </div>
-      
     </div>
   );
 }

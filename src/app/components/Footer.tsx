@@ -5,7 +5,7 @@ import React from "react";
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   return (
-    <div className=" my-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="my-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="py-14 px-6 md:px-10 lg:px-20 bg-brightblue rounded-[24px]">
         <div className="flex justify-between flex-col lg:flex-row gap-10">
           <div className="flex-2/5 flex flex-col gap-5">

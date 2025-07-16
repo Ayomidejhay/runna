@@ -1,16 +1,16 @@
 import React from "react";
 import About from "./components/About";
 import Footer from "../components/Footer";
-import FifthSection from "../components/FifthSection";
+import FifthSection from "../components/CTA";
 
 const page = () => {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <About
           caption="About Us"
           header="More Than an App — A Movement for Pet Wellness"
-          headerClassName="text-5xl"
+          headerClassName="text-3xl lg:text-5xl"
           text="We’re reimagining how pet owners build healthy habits with their animals — through simple routines, fun challenges, and a community that celebrates every small win."
           imageSrc="/about-one.png"
           imageAlt="about"

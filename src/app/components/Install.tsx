@@ -5,7 +5,7 @@ import React from 'react'
 export default function Install() {
   return (
     <div className="flex mt-10   flex-col gap-5 items-center ">
-        <div className="bg-[#1570EF] w-full  md:w-[222px] flex items-center justify-center h-11 mx-auto  rounded-[24px]">
+        <div className="bg-[#1570EF] w-full text-[#ffffff] md:w-[222px] flex items-center justify-center h-11 mx-auto  rounded-[24px]">
               <Link
                 
                 href="/signup"

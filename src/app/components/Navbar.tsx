@@ -41,28 +41,35 @@ export default function Navbar() {
 
           {/* Desktop Nav Links Centered */}
           <div className="absolute left-1/2 -translate-x-1/2">
-            <div className="hidden md:flex items-center space-x-8 text-[#ffffff]">
+            <div className="hidden md:flex items-center space-x-8 text-white">
               {navLinks.map((link) => {
                 const isActive =
                   pathname.startsWith(link.href) &&
                   (link.href !== "/" || pathname === "/");
+
                 return (
-                  <div key={link.href}>
+                  <div key={link.href} className="relative group">
                     {link.smart ? (
                       <SmartNavLink
                         href={link.href}
                         label={link.label}
                         setMobileMenuOpen={setMobileMenuOpen}
-                        className={`text-[16px] leading-5 ${
+                        className={`relative text-[16px] leading-5  transition-colors duration-200 ${
                           isActive ? "font-bold" : ""
-                        }`}
+                        } 
+              after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full 
+              after:bg-white after:scale-x-0 group-hover:after:scale-x-100 after:origin-left 
+              after:transition-transform after:duration-300`}
                       />
                     ) : (
                       <Link
                         href={link.href}
-                        className={`text-[16px] leading-5 ${
+                        className={`relative text-[16px] leading-5  transition-colors duration-200 ${
                           isActive ? "font-bold" : ""
-                        }`}
+                        } 
+              after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full 
+              after:bg-white after:scale-x-0 group-hover:after:scale-x-100 after:origin-left 
+              after:transition-transform after:duration-300`}
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         {link.label}
@@ -77,33 +84,28 @@ export default function Navbar() {
           {/* Action buttons */}
           <div className="items-center gap-[10px] flex">
             <div className="hidden md:flex gap-4">
-              <button className="w-[106px] h-[44px] text-[1rem] border border-[#ffffff] text-bold bg-transparent text-white rounded-[32px] items-center justify-center">
-                <Link href="/">Login</Link>
-              </button>
-              <button className="w-[106px] h-[44px] text-[1rem] border border-[#ffffff] text-bold text-[#1570EF] bg-[#ffffff] rounded-[32px] items-center justify-center">
-                <Link href="/">Sign Up</Link>
-              </button>
-            </div>
+  {/* Login Button */}
+  <Link href="/">
+    <button className="w-[106px] h-[44px] text-[1rem] border border-white font-semibold bg-transparent text-white rounded-[32px] flex items-center justify-center transition-all duration-300 hover:bg-white hover:text-[#1570EF] hover:shadow-md hover:-translate-y-1">
+      Login
+    </button>
+  </Link>
+
+  {/* Sign Up Button */}
+  <Link href="/">
+    <button className="w-[106px] h-[44px] text-[1rem] border border-white font-semibold text-[#1570EF] bg-white rounded-[32px] flex items-center justify-center transition-all duration-300 hover:bg-[#e8f0fe] hover:text-[#0f5fd0] hover:shadow-md hover:-translate-y-1">
+      Sign Up
+    </button>
+  </Link>
+</div>
+
 
             {/* Mobile Menu Button */}
             <button
               onClick={toggleSidebar}
               className="cursor-pointer md:hidden text-white"
             >
-              <svg
-                className="w-10 h-10"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                ></path>
-              </svg>
+              <Image src="/menu.png" alt="menu" width={24} height={24} />
             </button>
           </div>
         </div>
@@ -150,20 +152,12 @@ export default function Navbar() {
                     aria-label="Close sidebar"
                   >
                     {/* Close icon (X) */}
-                    <svg
-                      className="w-10 h-10"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M6 18L18 6M6 6l12 12"
-                      ></path>
-                    </svg>
+                    <Image
+                      src="/close.png"
+                      alt="close"
+                      width={32}
+                      height={32}
+                    />
                   </button>
                 </div>
 
@@ -188,15 +182,19 @@ export default function Navbar() {
                               href={link.href}
                               label={link.label}
                               setMobileMenuOpen={setMobileMenuOpen}
-                              className={`text-[16px] leading-5 text-deepblue ${
-                                isActive ? "font-bold text-brightblue" : ""
+                              className={`text-[16px] leading-5  ${
+                                isActive
+                                  ? "font-bold text-[#1570EF]"
+                                  : "text-deepblue"
                               }`}
                             />
                           ) : (
                             <Link
                               href={link.href}
-                              className={`text-[16px] leading-5 text-deepblue ${
-                                isActive ? "font-bold text-brightblue" : ""
+                              className={`text-[16px] leading-5  ${
+                                isActive
+                                  ? "font-bold text-[#1570EF]"
+                                  : "text-deepblue"
                               }`}
                               onClick={() => setMobileMenuOpen(false)}
                             >

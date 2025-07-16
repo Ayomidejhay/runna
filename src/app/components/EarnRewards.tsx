@@ -63,12 +63,12 @@ export default function EarnRewards() {
                 <div className="px-2 py-1 rounded-[100px] bg-lightblue text-brightblue text-[14px] font-bold w-fit">
                   <p>{card.badge}</p>
                 </div>
-                <p className="capitalize text-[24px] text-deepblue">
+                <p className="capitalize font-bold text-[24px] text-deepblue">
                   {card.title}
                 </p>
                 <p className="text-lighttext">{card.text}</p>
               </div>
-              <div className="mt-auto">
+              <div className="mt-auto">zz
                 <Image
                   src={card.image}
                   alt={card.title}

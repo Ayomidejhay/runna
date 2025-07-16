@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="py-14 px-6 md:px-10 lg:px-20 bg-brightblue rounded-[24px]">
         <div className="flex justify-between flex-col lg:flex-row gap-10">
           <div className="flex-2/5 flex flex-col gap-5">
-            <Image src="/logohome.png" alt="logo" width={50} height={50} />
+            <Image src="/logohome.png" width={64} height={40} alt="logo" />
             <div className="flex gap-3">
               <Image
                 src="/instagram.png"

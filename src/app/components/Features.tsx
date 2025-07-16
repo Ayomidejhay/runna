@@ -10,6 +10,7 @@ import {
   AnimatePresence,
 } from "framer-motion";
 import Install from "./Install";
+import FeaturesMobile from "./FeaturesMobile";
 
 const steps = [
   {
@@ -17,42 +18,42 @@ const steps = [
     title: "GPS Walk Tracking",
     description:
       "Real-time GPS tracking of your walks with detailed metrics including distance, time, route mapping, and calories burned.",
-    image: "/gps.png?height=400&width=600",
+    image: "/featureOne.png",
   },
   {
     id: 2,
     title: "PetFit Score",
     description:
       "Comprehensive wellness scoring system that tracks your pet's activity levels, consistency, and overall health trends over time.",
-    image: "/petfit.png?height=400&width=600",
+    image: "/petfit.png",
   },
   {
     id: 3,
     title: "Gamified Progress",
     description:
       "Earn badges, maintain streaks, climb leaderboards, and unlock achievements as you build consistent walking habits.",
-    image: "/gamified.png?height=400&width=600",
+    image: "/gamified.png",
   },
   {
     id: 4,
     title: "Local Communities",
     description:
       "Find and join local pet walking groups, discover walking buddies nearby, and participate in community events.",
-    image: "/local.png?height=400&width=600",
+    image: "/local.png",
   },
   {
     id: 5,
     title: "Social Sharing",
     description:
       "Share your walk adventures, post photos and videos, engage with other pet owners, and celebrate milestones together.",
-    image: "/social.png?height=400&width=600",
+    image: "/social.png",
   },
   {
     id: 6,
     title: "Discussion Forums",
     description:
       "Join open discussions about pet wellness, training tips, local walking spots, and connect with fellow pet lovers.",
-    image: "/discussion.png?height=400&width=600",
+    image: "/discussion.png",
   },
 ];
 
@@ -78,28 +79,7 @@ export default function Features() {
 
   const progressPercentage = (activeStep / (steps.length - 1)) * 100;
 
-  //sliding caurosel
-  // const [currentIndex, setCurrentIndex] = useState(0);
-  // const [isPaused, setIsPaused] = useState(false);
-  // const [dragConstraints, setDragConstraints] = useState({ left: 0, right: 0 });
-
-  // const activeStepData =
-  //   steps.find((step) => step.id === activeStep) || steps[0];
-
-  // // Function to handle drag gesture
-  // const handleDragEnd = (event: any, info: any) => {
-  //   const threshold = 20; // Minimum drag distance to trigger a change
-
-  //   if (info.offset.x > threshold) {
-  //     // Swiped right → go to previous slide
-  //     setCurrentIndex((prevIndex) =>
-  //       prevIndex === 0 ? steps.length - 1 : prevIndex - 1
-  //     );
-  //   } else if (info.offset.x < -threshold) {
-  //     // Swiped left → go to next slide
-  //     setCurrentIndex((prevIndex) => (prevIndex + 1) % steps.length);
-  //   }
-  // };
+  //mobile carousel
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0); // -1 for left, 1 for right
   const [isPaused, setIsPaused] = useState(false);
@@ -149,7 +129,7 @@ export default function Features() {
         </div>
         <div className="flex-1 hidden lg:flex flex-col gap-5 items-center lg:items-end">
           <Link
-            className="bg-[#1570EF] py-3 px-5 w-full md:max-w-[200px] rounded-[24px] text-center"
+            className="bg-[#1570EF] py-3 px-5 w-full md:max-w-[200px] text-[#ffffff] rounded-[24px] text-center"
             href="/signup"
           >
             Get Started For <span className="font-bold">FREE</span>
@@ -198,17 +178,17 @@ export default function Features() {
         ref={containerRef}
         style={{ height: `${steps.length * 100}vh` }}
       >
-        <div className="sticky top-0 h-screen flex items-center justify-center px-6 py-4">
+        <div className="sticky top-0 h-screen flex items-center justify-center  py-4">
           <div className="flex flex-row gap-10 w-full max-w-7xl h-[90%]">
             {/* Progress Sidebar */}
             <div className="relative flex flex-col justify-between w-[55%]">
-              <div className="absolute left-4 top-0 bottom-0 w-1 bg-gray-200 rounded-[10px]" />
+              <div className="absolute left-1 top-0 bottom-0 w-2 bg-[#E8F1FD] rounded-[10px]" />
               <motion.div
-                className="absolute left-4 top-0 w-1 bg-blue-500 rounded-[10px]"
+                className="absolute left-1 top-0 w-2 bg-blue-500 rounded-[10px]"
                 style={{ height: `${progressPercentage}%` }}
               />
               <motion.div
-                className="absolute w-3 h-3 bg-blue-500 rounded-full left-[12px]"
+                className="absolute w-4 h-4 bg-blue-500 rounded-full left-0"
                 style={{ top: `calc(${progressPercentage}% - 7px)` }}
               />
 
@@ -227,7 +207,7 @@ export default function Features() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
                       transition={{ duration: 0.3 }}
-                      className="text-gray-500 mt-2"
+                      className="text-gray-500 mt-2 max-w-[430px]"
                     >
                       {step.description}
                     </motion.p>
@@ -245,7 +225,7 @@ export default function Features() {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.4, ease: "easeInOut" }}
-                  className="relative w-full h-[500px]"
+                  className="relative w-full h-[550px]"
                 >
                   <Image
                     src={steps[activeStep].image}
@@ -261,95 +241,7 @@ export default function Features() {
       </div>
 
       {/*mobile caurosel*/}
-      <div
-      className="lg:hidden relative max-w-6xl mx-auto text-black"
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
-    >
-      <div className="relative rounded-2xl select-none overflow-hidden">
-        <AnimatePresence mode="wait" custom={direction}>
-          <motion.div
-            key={currentIndex}
-            custom={direction}
-            variants={variants}
-            initial="enter"
-            animate="center"
-            exit="exit"
-            transition={{ duration: 0.5, ease: "easeInOut" }}
-            drag="x"
-            dragConstraints={{ left: 0, right: 0 }}
-            dragElastic={0.2}
-            onDragStart={() => setIsPaused(true)}
-            onDragEnd={handleDragEnd}
-            whileDrag={{ cursor: "grabbing" }}
-            className="flex flex-col-reverse gap-8 items-center cursor-grab"
-          >
-            <div className="space-y-6 text-center">
-              <motion.h3
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3, duration: 0.5 }}
-                className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900"
-              >
-                {steps[currentIndex].title}
-              </motion.h3>
-
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4, duration: 0.5 }}
-                className="text-[18px]"
-              >
-                {steps[currentIndex].description}
-              </motion.p>
-            </div>
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
-              className="relative"
-            >
-              <div className="relative rounded-xl overflow-hidden shadow-lg">
-                <Image
-                  src={steps[currentIndex].image}
-                  alt={steps[currentIndex].title}
-                  width={600}
-                  height={500}
-                  className="object-cover"
-                />
-              </div>
-            </motion.div>
-          </motion.div>
-        </AnimatePresence>
-      </div>
-
-      {/* Progress indicators */}
-      <div className="flex justify-center mt-8 space-x-2">
-        {steps.map((_, index) => (
-          <motion.button
-            key={index}
-            onClick={() => {
-              setDirection(index > currentIndex ? 1 : -1);
-              setCurrentIndex(index);
-            }}
-            className={`h-2 rounded-full transition-all duration-300 cursor-pointer hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${
-              index === currentIndex
-                ? "w-2 bg-brightblue"
-                : "w-2 bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500"
-            }`}
-            initial={false}
-            animate={{ scale: index === currentIndex ? 1 : 1 }}
-            transition={{ duration: 0.3 }}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
-      </div>
-    </div>
-
-      <div className="lg:hidden">
-        <Install />
-      </div>
+      <FeaturesMobile />
     </section>
   );
 }

@@ -73,7 +73,7 @@ export default function Hero() {
                 visible: { opacity: 1, scale: 1 },
               }}
               transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
-              className="bg-[#1570EF] w-full md:w-[222px] flex items-center justify-center h-11 mx-auto rounded-[24px] text-white font-medium text-[15px] mb-[32px]"
+              className="bg-[#1570EF] w-full  md:w-82.5 flex items-center justify-center h-11 mx-auto rounded-[24px] text-white font-medium text-[15px] mb-[32px]"
             >
               <Link href="/signup">
                 Get Started For <span className="font-bold">FREE</span>
@@ -102,7 +102,7 @@ export default function Hero() {
               {/* Apple Store */}
               <Link
                 href=""
-                className="bg-white text-[#1B1E21] w-40 flex items-center justify-center h-11 font-medium rounded-[8px] transition-shadow shadow-lg hover:shadow-xl transform hover:translate-y-1"
+                className="bg-white text-[#1B1E21] w-full md:w-40 flex items-center justify-center h-11 font-medium rounded-[8px] transition-shadow shadow-lg hover:shadow-xl transform hover:translate-y-1"
               >
                 <div className="flex gap-1 h-7">
                   <Image
@@ -121,7 +121,7 @@ export default function Hero() {
               {/* Google Play */}
               <Link
                 href=""
-                className="bg-white w-40 flex items-center justify-center h-11 text-[#1B1E21] font-medium rounded-[8px] transition-shadow shadow-lg hover:shadow-xl transform hover:translate-y-1"
+                className="bg-white w-full md:w-40 flex items-center justify-center h-11 text-[#1B1E21] font-medium rounded-[8px] transition-shadow shadow-lg hover:shadow-xl transform hover:translate-y-1"
               >
                 <div className="flex gap-1 h-7">
                   <Image

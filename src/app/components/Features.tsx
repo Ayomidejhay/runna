@@ -129,15 +129,15 @@ export default function Features() {
         </div>
         <div className="flex-1 hidden lg:flex flex-col gap-5 items-center lg:items-end">
           <Link
-            className="bg-[#1570EF] py-3 px-5 w-full md:max-w-[200px] text-[#ffffff] rounded-[24px] text-center"
+            className="bg-[#1570EF] py-3 px-5 w-full md:w-82.5 text-[#ffffff] rounded-[24px] text-center"
             href="/signup"
           >
             Get Started For <span className="font-bold">FREE</span>
           </Link>
-          <div className="flex items-center justify-center space-x-6">
+          <div className="flex items-center justify-center gap-4">
             <Link
               href=""
-              className="px-4 py-2 bg-[#000000] text-[#ffffff] font-medium rounded-[8px] transition-colors shadow-lg hover:shadow-xl transform hover:translate-y-1"
+              className="w-40 h-11 flex items-center justify-center bg-[#000000] text-[#ffffff] font-medium rounded-[8px] transition-colors shadow-lg hover:shadow-xl transform hover:translate-y-1"
             >
               <div className="flex gap-2 h-7">
                 <Image
@@ -154,7 +154,7 @@ export default function Features() {
             </Link>
             <Link
               href=""
-              className="px-4 py-2 bg-[#000000] text-[#ffffff] font-medium rounded-[8px] transition-colors shadow-lg hover:shadow-xl transform hover:translate-y-1"
+              className="w-40 flex items-center justify-center h-11 bg-[#000000] text-[#ffffff] font-medium rounded-[8px] transition-colors shadow-lg hover:shadow-xl transform hover:translate-y-1"
             >
               <div className="flex gap-2 h-7">
                 <Image
@@ -217,15 +217,15 @@ export default function Features() {
             </div>
 
             {/* Image Preview */}
-            <div className="flex items-center justify-center w-[45%]">
+            <div className="flex items-center justify-center w-[50%]">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={steps[activeStep].id}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-                  transition={{ duration: 0.4, ease: "easeInOut" }}
-                  className="relative w-full h-[550px]"
+                  transition={{ duration: 0.1, ease: "easeInOut" }}
+                  className="relative w-full h-[600px]"
                 >
                   <Image
                     src={steps[activeStep].image}

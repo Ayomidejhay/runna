@@ -111,7 +111,7 @@ export default function FeaturesMobile() {
               <motion.h3
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3, duration: 0.5 }}
+                transition={{ duration: 0.1 }}
                 className="text-2xl md:text-3xl lg:text-4xl mt-[24px] font-bold text-gray-900"
               >
                 {steps[currentIndex].title}
@@ -120,7 +120,7 @@ export default function FeaturesMobile() {
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4, duration: 0.5 }}
+                transition={{ duration: 0.1 }}
                 className="text-[18px] mt-[16px]"
               >
                 {steps[currentIndex].description}
@@ -130,15 +130,15 @@ export default function FeaturesMobile() {
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
+              transition={{  duration: 0.1 }}
               className="w-full max-w-[100%] rounded-xl overflow-hidden shadow-lg"
             >
               <Image
                 src={steps[currentIndex].image}
                 alt={steps[currentIndex].title}
                 width={350}
-                height={400}
-                className="object-cover w-full h-[400px] rounded-xl"
+                height={500}
+                className="object-cover w-full h-[500px] rounded-xl"
               />
             </motion.div>
           </motion.div>
@@ -160,7 +160,7 @@ export default function FeaturesMobile() {
               }`}
               initial={false}
               animate={{ scale: index === currentIndex ? 1 : 1 }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.1 }}
               aria-label={`Go to slide ${index + 1}`}
             />
           ))}

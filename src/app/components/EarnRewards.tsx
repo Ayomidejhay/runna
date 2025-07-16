@@ -57,9 +57,9 @@ export default function EarnRewards() {
                 duration: 0.6,
                 ease: [0.25, 0.1, 0.25, 1], // cubic-bezier for easeOut
               }}
-              className="flex-1 bg-white rounded-t-[16px] max-w-[628px] flex flex-col"
+              className="flex-1 bg-white rounded-t-[16px] max-w-[628px] flex flex-col mx-auto"
             >
-              <div className="flex flex-col gap-3 px-5 py-8 h-full">
+              <div className="flex flex-col gap-3 px-5 py-8 h-full ">
                 <div className="px-2 py-1 rounded-[100px] bg-lightblue text-brightblue text-[14px] font-bold w-fit">
                   <p>{card.badge}</p>
                 </div>
@@ -68,7 +68,7 @@ export default function EarnRewards() {
                 </p>
                 <p className="text-lighttext">{card.text}</p>
               </div>
-              <div className="mt-auto">zz
+              <div className="mt-auto">
                 <Image
                   src={card.image}
                   alt={card.title}
@@ -81,7 +81,7 @@ export default function EarnRewards() {
           ))}
         </div>
 
-        <div className="mt-5">
+        <div className="mt-5 mx-auto">
           <Install />
         </div>
       </div>

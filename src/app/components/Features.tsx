@@ -116,7 +116,7 @@ export default function Features() {
   };
 
   return (
-    <section id="features" className="mt-[-5rem] mb-[2rem] w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+    <section id="features" className="mt-24 md:mt-0 mb-[2rem] w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
       <div className="flex flex-col lg:flex-row mb-10 justify-between gap-10">
         <div className="flex-1 text-center lg:text-left">
           <p className="text-3xl capitalize font-bold text-deepblue mb-4">
@@ -232,6 +232,7 @@ export default function Features() {
                     alt={steps[activeStep].title}
                     fill
                     className="object-cover w-full h-full"
+                    priority={true}
                   />
                 </motion.div>
               </AnimatePresence>

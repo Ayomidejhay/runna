@@ -11,21 +11,21 @@ const steps = [
     title: "GPS Walk Tracking",
     description:
       "Real-time GPS tracking of your walks with detailed metrics including distance, time, route mapping, and calories burned.",
-    image: "/featureOne.png",
+    image: "/gpstrack.png",
   },
   {
     id: 2,
     title: "PetFit Score",
     description:
       "Comprehensive wellness scoring system that tracks your pet's activity levels, consistency, and overall health trends over time.",
-    image: "/petfit.png",
+    image: "/pscore.png",
   },
   {
     id: 3,
     title: "Gamified Progress",
     description:
       "Earn badges, maintain streaks, climb leaderboards, and unlock achievements as you build consistent walking habits.",
-    image: "/gamified.png",
+    image: "/gprogress.png",
   },
   {
     id: 4,
@@ -39,14 +39,14 @@ const steps = [
     title: "Social Sharing",
     description:
       "Share your walk adventures, post photos and videos, engage with other pet owners, and celebrate milestones together.",
-    image: "/social.png",
+    image: "/sharing.png",
   },
   {
     id: 6,
     title: "Discussion Forums",
     description:
       "Join open discussions about pet wellness, training tips, local walking spots, and connect with fellow pet lovers.",
-    image: "/discussion.png",
+    image: "/dforum.png",
   },
 ];
 
@@ -93,7 +93,7 @@ export default function FeaturesMobile() {
 
   return (
     <div className="lg:hidden">
-      <div className="relative max-w-6xl mx-auto text-black min-h-[600px] overflow-hidden">
+      <div className="relative max-w-6xl mx-auto text-deepblue min-h-[600px] overflow-hidden">
         {/* Slide container with absolute stacking */}
         <div className="relative w-full h-[600px]">
           <AnimatePresence custom={direction}>
@@ -135,14 +135,15 @@ export default function FeaturesMobile() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.1 }}
-                className="w-full max-w-[100%] rounded-xl overflow-hidden shadow-lg"
+                className="w-full max-w-[100%]  overflow-hidden"
               >
                 <Image
                   src={steps[currentIndex].image}
                   alt={steps[currentIndex].title}
-                  width={350}
-                  height={500}
-                  className="object-cover w-full h-[500px] rounded-xl"
+                  width={343}
+                  height={376}
+                  className="object-cover w-full  "
+                  priority={true}
                 />
               </motion.div>
             </motion.div>

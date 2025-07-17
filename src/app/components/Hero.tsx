@@ -18,6 +18,7 @@ export default function Hero() {
           quality={80}
           priority={true}
           className="z-0"
+          
         />
 
         {/* Overlay */}

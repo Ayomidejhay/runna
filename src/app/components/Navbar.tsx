@@ -208,10 +208,10 @@ export default function Navbar() {
 
                   <div className="flex flex-col gap-5">
                     <button className=" h-[44px]  text-[1rem] border border-brightblue text-bold bg-brightblue text-white   rounded-[32px]  flex items-center justify-center  ">
-                      Login
+                      Sign Up
                     </button>
                     <button className=" h-[44px]  text-[1rem] border border-brightblue text-bold text-brightblue bg-white   rounded-[32px]   flex items-center justify-center ">
-                      Sign up
+                      Login
                     </button>
                   </div>
                 </div>

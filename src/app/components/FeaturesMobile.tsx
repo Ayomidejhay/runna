@@ -50,7 +50,6 @@ const steps = [
   },
 ];
 
-// Corrected variants with proper type
 const variants: Variants = {
   enter: (dir: number) => ({
     x: dir > 0 ? 300 : -300,
@@ -62,14 +61,18 @@ const variants: Variants = {
     opacity: 1,
     scale: 1,
     transition: {
-      duration: 0.5,
-      ease: [0.42, 0, 0.58, 1], // cubic-bezier easeInOut equivalent
+      x: { type: "spring", stiffness: 300, damping: 30 },
+      opacity: { duration: 0.2 },
     },
   },
   exit: (dir: number) => ({
     x: dir > 0 ? -300 : 300,
     opacity: 0,
     scale: 0.95,
+    transition: {
+      x: { type: "spring", stiffness: 300, damping: 30 },
+      opacity: { duration: 0.2 },
+    },
   }),
 };
 
@@ -90,61 +93,63 @@ export default function FeaturesMobile() {
 
   return (
     <div className="lg:hidden">
-      {/* Carousel container with fixed height */}
-      <div className="relative max-w-6xl mx-auto text-black min-h-[500px] overflow-hidden">
-        <AnimatePresence mode="wait" custom={direction}>
-          <motion.div
-            key={currentIndex}
-            custom={direction}
-            variants={variants}
-            initial="enter"
-            animate="center"
-            exit="exit"
-            drag="x"
-            dragConstraints={{ left: 0, right: 0 }}
-            dragElastic={0.2}
-            onDragEnd={handleDragEnd}
-            whileDrag={{ cursor: "grabbing" }}
-            className="flex flex-col-reverse items-center cursor-grab"
-          >
-            <div className=" text-center">
-              <motion.h3
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.1 }}
-                className="text-2xl md:text-3xl lg:text-4xl mt-[24px] font-bold text-gray-900"
-              >
-                {steps[currentIndex].title}
-              </motion.h3>
-
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.1 }}
-                className="text-[18px] mt-[16px]"
-              >
-                {steps[currentIndex].description}
-              </motion.p>
-            </div>
-
+      <div className="relative max-w-6xl mx-auto text-black min-h-[600px] overflow-hidden">
+        {/* Slide container with absolute stacking */}
+        <div className="relative w-full h-[600px]">
+          <AnimatePresence custom={direction}>
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{  duration: 0.1 }}
-              className="w-full max-w-[100%] rounded-xl overflow-hidden shadow-lg"
+              key={currentIndex}
+              custom={direction}
+              variants={variants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              drag="x"
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={0.2}
+              onDragEnd={handleDragEnd}
+              whileDrag={{ cursor: "grabbing" }}
+              className="absolute w-full h-full flex flex-col-reverse items-center justify-center cursor-grab"
             >
-              <Image
-                src={steps[currentIndex].image}
-                alt={steps[currentIndex].title}
-                width={350}
-                height={500}
-                className="object-cover w-full h-[500px] rounded-xl"
-              />
-            </motion.div>
-          </motion.div>
-        </AnimatePresence>
+              <div className="text-center px-4">
+                <motion.h3
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.1 }}
+                  className="text-2xl md:text-3xl mt-[24px] font-bold text-gray-900"
+                >
+                  {steps[currentIndex].title}
+                </motion.h3>
 
-        {/* Progress Indicators */}
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.1 }}
+                  className="text-[18px] mt-[16px]"
+                >
+                  {steps[currentIndex].description}
+                </motion.p>
+              </div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.1 }}
+                className="w-full max-w-[100%] rounded-xl overflow-hidden shadow-lg"
+              >
+                <Image
+                  src={steps[currentIndex].image}
+                  alt={steps[currentIndex].title}
+                  width={350}
+                  height={500}
+                  className="object-cover w-full h-[500px] rounded-xl"
+                />
+              </motion.div>
+            </motion.div>
+          </AnimatePresence>
+        </div>
+
+        {/* Dots */}
         <div className="flex justify-center mt-8 space-x-2">
           {steps.map((_, index) => (
             <motion.button
@@ -158,16 +163,13 @@ export default function FeaturesMobile() {
                   ? "w-2 bg-brightblue"
                   : "w-2 bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500"
               }`}
-              initial={false}
-              animate={{ scale: index === currentIndex ? 1 : 1 }}
-              transition={{ duration: 0.1 }}
               aria-label={`Go to slide ${index + 1}`}
             />
           ))}
         </div>
       </div>
 
-      {/* CTA below carousel */}
+      {/* CTA */}
       <div className="mt-10">
         <Install />
       </div>

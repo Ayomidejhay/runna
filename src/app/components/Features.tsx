@@ -79,41 +79,7 @@ export default function Features() {
 
   const progressPercentage = (activeStep / (steps.length - 1)) * 100;
 
-  //mobile carousel
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [direction, setDirection] = useState(0); // -1 for left, 1 for right
-  const [isPaused, setIsPaused] = useState(false);
-
-  const handleDragEnd = (_: any, info: any) => {
-    const threshold = 50;
-
-    if (info.offset.x > threshold) {
-      // Swiped right: show previous
-      setDirection(-1);
-      setCurrentIndex((prev) =>
-        prev === 0 ? steps.length - 1 : prev - 1
-      );
-    } else if (info.offset.x < -threshold) {
-      // Swiped left: show next
-      setDirection(1);
-      setCurrentIndex((prev) => (prev + 1) % steps.length);
-    }
-  };
-
-  const variants = {
-    enter: (dir: number) => ({
-      x: dir > 0 ? 300 : -300,
-      opacity: 0,
-    }),
-    center: {
-      x: 0,
-      opacity: 1,
-    },
-    exit: (dir: number) => ({
-      x: dir > 0 ? -300 : 300,
-      opacity: 0,
-    }),
-  };
+  
 
   return (
     <section id="features" className="mt-24 md:mt-0 mb-[2rem] w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">

@@ -21,22 +21,22 @@ export default function WellnessCardsSection() {
 
   const cards = [
     {
-      img: "/task-square.png",
+      img: "/task-square.svg",
       title: "daily challenge that support pet wellness",
       text: "Your pet’s health needs more than just vet visits — we turn small actions into lasting habits.",
     },
     {
-      img: "/chart.png",
+      img: "/chart.svg",
       title: "more than walks: complete pet wellbeing",
       text: "Health isn’t one-size-fits-all. From walks to play to rest — customize wellness your way.",
     },
     {
-      img: "/stickynote.png",
+      img: "/stickynote.svg",
       title: "structured routine that fit real life",
       text: "It's easy to lose track of wellness goals — we help you stay consistent through flexible challenges.",
     },
     {
-      img: "/calendar-tick.png",
+      img: "/calendar-tick.svg",
       title: "everyday activities with long-term impact",
       text: "Small daily actions add up. Our platform helps you track and build toward your pet’s full potential.",
     },

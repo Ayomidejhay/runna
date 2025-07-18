@@ -92,7 +92,7 @@ export default function FeaturesMobileView() {
                       {step.title}
                     </h3>
 
-                    <p className="text-[18px] mt-[16px]">{step.description}</p>
+                    <p className="text-[18px] mt-[16px] text-[#5F6A7E]">{step.description}</p>
                   </div>
 
                   <div className="w-full max-w-[100%]  overflow-hidden">
@@ -119,7 +119,7 @@ export default function FeaturesMobileView() {
               className={`rounded-full transition-all duration-300 ${
                 index === selectedIndex
                   ? "w-3 h-3 bg-brightblue scale-110"
-                  : "w-3 h-3 bg-gray-300 hover:bg-gray-400"
+                  : "w-3 h-3 bg-[#F0F0F0] "
               }`}
               onClick={() => emblaApi?.scrollTo(index)}
               aria-label={`Go to slide ${index + 1}`}

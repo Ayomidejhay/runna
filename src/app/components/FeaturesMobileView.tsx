@@ -74,10 +74,10 @@ export default function FeaturesMobileView() {
   }, [emblaApi, onSelect]);
   return (
     <div className="lg:hidden">
-      <div className="relative max-w-6xl mx-auto text-deepblue min-h-[600px] overflow-hidden">
+      <div className="relative max-w-6xl mx-auto text-deepblue min-h-[530px] overflow-hidden">
         {/* Slide container with absolute stacking */}
         <div
-          className="relative w-full h-[600px] embla overflow-hidden"
+          className="relative w-full h-[530px] embla overflow-hidden"
           ref={emblaRef}
         >
           <div className="embla__container flex">
@@ -88,7 +88,7 @@ export default function FeaturesMobileView() {
               >
                 <div className=" w-full h-full flex flex-col-reverse items-center justify-center cursor-grab">
                   <div className="text-center px-4">
-                    <h3 className="text-2xl md:text-3xl mt-[24px] font-bold text-gray-900">
+                    <h3 className="text-2xl md:text-3xl mt-[24px] font-bold text-deepblue">
                       {step.title}
                     </h3>
 
@@ -129,7 +129,7 @@ export default function FeaturesMobileView() {
       </div>
 
       {/* CTA */}
-      <div className="mt-10">
+      <div className="">
         <Install />
       </div>
     </div>

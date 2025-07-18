@@ -10,7 +10,6 @@ import {
   AnimatePresence,
 } from "framer-motion";
 import Install from "./Install";
-import FeaturesMobile from "./FeaturesMobile";
 import FeaturesMobileView from "./FeaturesMobileView";
 
 const steps = [
@@ -65,25 +64,24 @@ export default function Features() {
     offset: ["start start", "end end"],
   });
 
-  const stepIndex = useTransform(scrollYProgress, (v) =>
-    Math.min(steps.length - 1, Math.floor(v * steps.length))
-  );
+  const stepIndex = useTransform(scrollYProgress, [0, 1], [0, steps.length - 1]);
 
   const [activeStep, setActiveStep] = useState(0);
 
   useEffect(() => {
     const unsubscribe = stepIndex.on("change", (latest) => {
-      setActiveStep(latest);
+      setActiveStep(Math.round(latest));
     });
     return () => unsubscribe();
   }, [stepIndex]);
 
   const progressPercentage = (activeStep / (steps.length - 1)) * 100;
 
-  
-
   return (
-    <section id="features" className="mt-24 md:mt-0 mb-[2rem] w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+    <section
+      id="features"
+      className="mt-24 md:mt-0 mb-[2rem] w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative"
+    >
       <div className="flex flex-col lg:flex-row mb-10 justify-between gap-10">
         <div className="flex-1 text-center lg:text-left">
           <p className="text-3xl capitalize font-bold text-deepblue mb-4">
@@ -140,12 +138,13 @@ export default function Features() {
         </div>
       </div>
 
+      {/* Scroll-based feature */}
       <div
         className="hidden lg:block"
         ref={containerRef}
-        style={{ height: `${steps.length * 100}vh` }}
+        style={{ height: `${steps.length * 40}vh` }} // Adjusted scroll sensitivity
       >
-        <div className="sticky top-0 h-screen flex items-center justify-center  py-4">
+        <div className="sticky top-0 h-screen flex items-center justify-center py-4">
           <div className="flex flex-row gap-10 w-full max-w-7xl h-[90%]">
             {/* Progress Sidebar */}
             <div className="relative flex flex-col justify-between w-[55%]">
@@ -208,7 +207,7 @@ export default function Features() {
         </div>
       </div>
 
-      {/*mobile caurosel*/}
+      {/* Mobile carousel */}
       <FeaturesMobileView />
     </section>
   );

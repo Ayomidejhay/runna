@@ -11,6 +11,7 @@ import {
 } from "framer-motion";
 import Install from "./Install";
 import FeaturesMobile from "./FeaturesMobile";
+import FeaturesMobileView from "./FeaturesMobileView";
 
 const steps = [
   {
@@ -208,7 +209,7 @@ export default function Features() {
       </div>
 
       {/*mobile caurosel*/}
-      <FeaturesMobile />
+      <FeaturesMobileView />
     </section>
   );
 }

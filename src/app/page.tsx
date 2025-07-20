@@ -6,6 +6,7 @@ import EarnRewards from "./components/EarnRewards";
 import CTA from "./components/CTA";
 import Footer from "./components/Footer";
 import WellnessCardsSection from "./components/WellnessCardsSection";
+import Faq from "./components/Faq";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <HowItWorks />
       <Features />
       <EarnRewards />
+      <Faq />
       <CTA />
       <Footer />
     </div>

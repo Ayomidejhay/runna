@@ -77,7 +77,7 @@ export default function FeaturesMobileView() {
       <div className="relative max-w-6xl mx-auto text-deepblue min-h-[530px] overflow-hidden">
         {/* Slide container with absolute stacking */}
         <div
-          className="relative w-full h-[530px] embla overflow-hidden"
+          className="relative w-full h-[560px] embla overflow-hidden"
           ref={emblaRef}
         >
           <div className="embla__container flex">

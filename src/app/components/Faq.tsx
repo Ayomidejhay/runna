@@ -45,9 +45,9 @@ export default function Faq() {
   };
   return (
     <div className=" px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-      <div className="max-w-3xl mx-auto mt-8 space-y-4 md:mt-16">
+      <div className="max-w-3xl mx-auto mt-16 space-y-[64px] md:mt-24">
         <div className="max-w-[430px] mx-auto">
-            <p className="capitalize text-[40px] font-bold text-deepblue text-center">
+            <p className="capitalize text-[34px] md:text-[40px] font-bold text-deepblue text-center">
           frequently asked questions
         </p>
         </div>

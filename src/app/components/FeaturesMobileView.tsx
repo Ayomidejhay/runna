@@ -74,10 +74,10 @@ export default function FeaturesMobileView() {
   }, [emblaApi, onSelect]);
   return (
     <div className="lg:hidden">
-      <div className="relative max-w-6xl mx-auto text-deepblue min-h-[530px] overflow-hidden">
+      <div className="relative max-w-6xl mx-auto text-deepblue  overflow-hidden" > 
         {/* Slide container with absolute stacking */}
         <div
-          className="relative w-full h-[560px] embla overflow-hidden"
+          className="relative w-full  embla overflow-hidden" //min-h-[530px] h-560px
           ref={emblaRef}
         >
           <div className="embla__container flex">

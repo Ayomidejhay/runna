@@ -18,7 +18,6 @@ export default function Home() {
       <EarnRewards />
       <Faq />
       <CTA />
-      <Footer />
     </div>
   );
 }

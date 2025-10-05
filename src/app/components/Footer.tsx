@@ -9,23 +9,48 @@ export default function Footer() {
       <div className="py-14 px-6 md:px-10 lg:px-20 bg-brightblue rounded-[24px]">
         <div className="flex justify-between flex-col lg:flex-row gap-10">
           <div className="flex-2/5 flex flex-col gap-5">
-            <Image src="/logohome.png" width={64} height={40} alt="logo" />
+            <Link href="/">
+              <Image src="/logohome.png" width={64} height={40} alt="logo" />
+            </Link>
             <div className="flex gap-3">
-              <Image
-                src="/instagram.png"
-                alt="instagram"
-                width={32}
-                height={32}
-              />
-              <Image
-                src="/facebook.png"
-                alt="facebook"
-                width={32}
-                height={32}
-              />
-              <div className="bg-white h-8 w-8 flex items-center justify-center rounded-[4px]">
+              <Link
+                href="https://www.instagram.com/officialrunnarsapp/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-transform transform hover:scale-110 hover:shadow-lg cursor-pointer"
+              >
+                <Image
+                  src="/instagram.png"
+                  alt="instagram"
+                  width={32}
+                  height={32}
+                  className="rounded-md"
+                />
+              </Link>
+
+              <Link
+                href="https://facebook.com/officialrunnarsapp"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-transform transform hover:scale-110 hover:shadow-lg cursor-pointer"
+              >
+                <Image
+                  src="/facebook.png"
+                  alt="facebook"
+                  width={32}
+                  height={32}
+                  className="rounded-md"
+                />
+              </Link>
+
+              <Link
+                href="https://x.com/runnarsapp?s=21"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white h-8 w-8 flex items-center justify-center rounded-[4px] transition-transform transform hover:scale-110 hover:shadow-md cursor-pointer"
+              >
                 <Image src="/x.png" alt="x" width={17} height={17} />
-              </div>
+              </Link>
             </div>
           </div>
           <div className="flex-3/5 flex flex-col lg:flex-row gap-10 justify-between">
@@ -34,7 +59,7 @@ export default function Footer() {
               <div className="flex flex-col  space-y-3">
                 <Link
                   href=""
-                  className="px-4 py-2 w-[150px] bg-[#ffffff] text-[#1B1E21] font-medium rounded-[8px] transition-colors shadow-lg hover:shadow-xl transform hover:translate-y-1 flex items-center justify-center"
+                  className="px-4 py-2 w-[150px] bg-[#ffffff] text-[#1B1E21] font-medium rounded-[8px] transition-colors shadow-lg hover:shadow-xl transform hover:translate-y-1 flex items-center justify-center cursor-not-allowed pointer-events-none"
                 >
                   <div className="flex gap-1 h-7">
                     <Image
@@ -51,7 +76,7 @@ export default function Footer() {
                 </Link>
                 <Link
                   href="/"
-                  className="w-[150px] px-4 py-2 bg-[#ffffff] text-[#1B1E21] font-medium rounded-[8px] transition-colors shadow-lg hover:shadow-xl transform hover:translate-y-1 flex items-center justify-center"
+                  className="w-[150px] px-4 py-2 bg-[#ffffff] text-[#1B1E21] font-medium rounded-[8px] transition-colors shadow-lg hover:shadow-xl transform hover:translate-y-1 flex items-center justify-center cursor-not-allowed pointer-events-none"
                 >
                   <div className="flex gap-1 h-7">
                     <Image
@@ -71,7 +96,10 @@ export default function Footer() {
             <div className="flex flex-col gap-5">
               <p className="font-bold text-[14px] text-[#B6D3FA]">Company</p>
               <div className="text-white font-bold text-[12px] flex flex-col gap-4">
-                <Link href="/about" className="">
+                <Link
+                  href="/about"
+                  className="transition-transform transform hover:scale-110 hover:shadow-lg cursor-pointer"
+                >
                   About Us
                 </Link>
               </div>
@@ -79,10 +107,16 @@ export default function Footer() {
             <div className="flex flex-col gap-5">
               <p className="font-bold text-[14px] text-[#B6D3FA]">Legal</p>
               <div className="text-white font-bold text-[12px] flex flex-col gap-4">
-                <Link href="/" className="">
+                <Link
+                  href="/privacy-policy"
+                  className="transition-transform transform hover:scale-110 hover:shadow-lg cursor-pointer"
+                >
                   Privacy Policies
                 </Link>
-                <Link href="/" className="">
+                <Link
+                  href="/cookies-policy"
+                  className="transition-transform transform hover:scale-110 hover:shadow-lg cursor-pointer"
+                >
                   Cookies
                 </Link>
               </div>

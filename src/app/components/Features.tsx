@@ -93,11 +93,17 @@ export default function Features() {
           </p>
         </div>
         <div className="flex-1 hidden lg:flex flex-col gap-5 items-center lg:items-end">
-          <Link
+          {/* <Link
             className="bg-[#1570EF] py-3 px-5 w-full md:w-82.5 text-[#ffffff] rounded-[24px] text-center"
             href="/signup"
           >
             Get Started For <span className="font-bold">FREE</span>
+          </Link> */}
+          <Link
+            className="bg-[#1570EF] py-3 px-5 w-full md:w-82.5 text-[#ffffff] rounded-[24px] text-center"
+            href="#"
+          >
+            Coming <span className="font-bold">SOON...</span>
           </Link>
           <div className="flex items-center justify-center gap-4">
             <Link

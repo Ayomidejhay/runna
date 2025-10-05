@@ -83,22 +83,22 @@ export default function Navbar() {
 
           {/* Action buttons */}
           <div className="items-center gap-[10px] flex">
-            <div className="hidden md:flex gap-4">
-  {/* Login Button */}
-  <Link href="/">
-    <button className="w-[106px] h-[44px] text-[1rem] border border-white font-semibold bg-transparent text-white rounded-[32px] flex items-center justify-center transition-all duration-300 hover:bg-white hover:text-[#1570EF] hover:shadow-md hover:-translate-y-1">
-      Login
-    </button>
-  </Link>
+            {/* md:flex */}
+            <div className="hidden  gap-4">
+              {/* Login Button */}
+              <Link href="/">
+                <button className="w-[106px] h-[44px] text-[1rem] border border-white font-semibold bg-transparent text-white rounded-[32px] flex items-center justify-center transition-all duration-300 hover:bg-white hover:text-[#1570EF] hover:shadow-md hover:-translate-y-1">
+                  Login
+                </button>
+              </Link>
 
-  {/* Sign Up Button */}
-  <Link href="/">
-    <button className="w-[106px] h-[44px] text-[1rem] border border-white font-semibold text-[#1570EF] bg-white rounded-[32px] flex items-center justify-center transition-all duration-300 hover:bg-[#e8f0fe] hover:text-[#0f5fd0] hover:shadow-md hover:-translate-y-1">
-      Sign Up
-    </button>
-  </Link>
-</div>
-
+              {/* Sign Up Button */}
+              <Link href="/">
+                <button className="w-[106px] h-[44px] text-[1rem] border border-white font-semibold text-[#1570EF] bg-white rounded-[32px] flex items-center justify-center transition-all duration-300 hover:bg-[#e8f0fe] hover:text-[#0f5fd0] hover:shadow-md hover:-translate-y-1">
+                  Sign Up
+                </button>
+              </Link>
+            </div>
 
             {/* Mobile Menu Button */}
             <button
@@ -205,8 +205,8 @@ export default function Navbar() {
                       );
                     })}
                   </div>
-
-                  <div className="flex flex-col gap-5">
+                  {/* display:flex */}
+                  <div className="hidden  flex-col gap-5 ">
                     <button className=" h-[44px]  text-[1rem] border border-brightblue text-bold bg-brightblue text-white   rounded-[32px]  flex items-center justify-center  ">
                       Sign Up
                     </button>

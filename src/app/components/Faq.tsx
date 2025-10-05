@@ -11,7 +11,7 @@ const faqs = [
       "Runnars is a wellness and community app for dog owners. It helps you stay consistent with daily walks, track your pet’s wellness, join challenges, and connect with other pet lovers—all while earning rewards.",
   },
   {
-    question: "Do I need a dog to use the app?",
+    question: "Do I need a pet to use the app?",
     answer:
       "Runnars is designed for pet’s owners, but if you’re a pet lover or planning to adopt, you can still explore the community and challenges until you’re ready to add a pet profile.",
   },

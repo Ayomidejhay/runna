@@ -29,7 +29,7 @@ export default function Footer() {
               </Link>
 
               <Link
-                href="https://facebook.com/officialrunnarsapp"
+                href="https://www.facebook.com/profile.php?id=100078407485911"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-transform transform hover:scale-110 hover:shadow-lg cursor-pointer"
@@ -55,7 +55,8 @@ export default function Footer() {
           </div>
           <div className="flex-3/5 flex flex-col lg:flex-row gap-10 justify-between">
             <div className="flex flex-col gap-5">
-              <p className="font-bold text-[14px] text-[#B6D3FA]">Get App</p>
+              {/* <p className="font-bold text-[14px] text-[#B6D3FA]">Get App</p> */}
+              <p className="font-bold text-[14px] text-[#B6D3FA]">Coming Soon</p>
               <div className="flex flex-col  space-y-3">
                 <Link
                   href=""
@@ -94,7 +95,7 @@ export default function Footer() {
               </div>
             </div>
             <div className="flex flex-col gap-5">
-              <p className="font-bold text-[14px] text-[#B6D3FA]">Company</p>
+              {/* <p className="font-bold text-[14px] text-[#B6D3FA]">Company</p> */}
               <div className="text-white font-bold text-[12px] flex flex-col gap-4">
                 <Link
                   href="/about"
@@ -105,7 +106,7 @@ export default function Footer() {
               </div>
             </div>
             <div className="flex flex-col gap-5">
-              <p className="font-bold text-[14px] text-[#B6D3FA]">Legal</p>
+              {/* <p className="font-bold text-[14px] text-[#B6D3FA]">Legal</p> */}
               <div className="text-white font-bold text-[12px] flex flex-col gap-4">
                 <Link
                   href="/privacy-policy"
@@ -122,7 +123,7 @@ export default function Footer() {
               </div>
             </div>
             <div className="flex flex-col gap-5">
-              <p className="font-bold text-[14px] text-[#B6D3FA]">Contact Us</p>
+              {/* <p className="font-bold text-[14px] text-[#B6D3FA]">Contact Us</p> */}
               <div className="text-white font-bold text-[12px] flex flex-col gap-4">
                 <Link href="/" className="">
                   support@runnarsapp.com

@@ -168,7 +168,7 @@ export default function Hero() {
               </Link>
 
               <Link
-                href="https://facebook.com/officialrunnarsapp"
+                href="https://www.facebook.com/profile.php?id=100078407485911"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-transform transform hover:scale-110 hover:shadow-lg cursor-pointer"

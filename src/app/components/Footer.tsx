@@ -14,7 +14,7 @@ export default function Footer() {
             </Link>
             <div className="flex gap-3">
               <Link
-                href="https://www.instagram.com/officialrunnarsapp/"
+                href="https://www.instagram.com/runnarspet?igsh=MWt6bDRhNXBiMG9uYw=="
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-transform transform hover:scale-110 hover:shadow-lg cursor-pointer"
@@ -43,14 +43,14 @@ export default function Footer() {
                 />
               </Link>
 
-              <Link
+              {/* <Link
                 href="https://x.com/runnarsapp?s=21"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white h-8 w-8 flex items-center justify-center rounded-[4px] transition-transform transform hover:scale-110 hover:shadow-md cursor-pointer"
               >
                 <Image src="/x.png" alt="x" width={17} height={17} />
-              </Link>
+              </Link> */}
             </div>
           </div>
           <div className="flex-3/5 flex flex-col lg:flex-row gap-10 justify-between">

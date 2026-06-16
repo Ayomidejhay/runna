@@ -1,0 +1,14 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "9L78N6GT47.com.runnarsapp.mobile",
+        "paths": [
+          "/challenge/*",
+          "/post/*"
+        ]
+      }
+    ]
+  }
+}

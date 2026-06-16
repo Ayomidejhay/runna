@@ -1,0 +1,14 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.runnarsapp.mobile",
+      "sha256_cert_fingerprints": [
+        "DEBUG:E7:BB:43:08:22:77:A6:17:41:9D:8E:B5:8F:C6:81:A6:82:BE:75:0D:9A:68:96:95:4F:59:3F:13:DF:CE:34:96",
+        "UPLOAD:KEY:F0:CA:19:49:B3:1D:ED:8C:B2:84:F3:3B:1E:FC:36:E4:58:41:96:DE:01:84:F5:1E:5F:D5:62:1B:41:68:7E:28",
+        "GOOGLE:PLAY:7A:74:FC:F1:7D:1D:C7:80:8D:BA:DE:A2:F9:19:F2:C9:A2:B0:C1:F4:27:6F:96:05:61:E7:CC:3C:C9:BE:FA:09"
+      ]
+    }
+  }
+]

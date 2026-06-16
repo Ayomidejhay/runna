@@ -67,6 +67,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import localFont from "next/font/local";
 import FooterController from "./components/FooterController"; // 👈 new wrapper
+import LoadingScreen from "./components/LoadingScreen"; // 👈 custom loader
 
 const satoshi = localFont({
   src: [
@@ -99,6 +100,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`bg-[#ffffff] ${satoshi.className} antialiased`}>
+        <LoadingScreen />
         <Navbar />
         {children}
         <FooterController /> {/* 👈 conditionally shows Footer */}

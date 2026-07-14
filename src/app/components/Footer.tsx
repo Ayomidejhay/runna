@@ -55,11 +55,12 @@ export default function Footer() {
           </div>
           <div className="flex-3/5 flex flex-col lg:flex-row gap-10 justify-between">
             <div className="flex flex-col gap-5">
-              {/* <p className="font-bold text-[14px] text-[#B6D3FA]">Get App</p> */}
-              <p className="font-bold text-[14px] text-[#B6D3FA]">Coming Soon</p>
+              <p className="font-bold text-[14px] text-[#B6D3FA]">Get App</p>
+              {/* <p className="font-bold text-[14px] text-[#B6D3FA]">Coming Soon</p> */}
               <div className="flex flex-col  space-y-3">
                 <Link
-                  href=""
+                  href="https://apps.apple.com/us/app/runnars-app/id6759202549"
+                  target="_blank"
                   className="px-4 py-2 w-[150px] bg-[#ffffff] text-[#1B1E21] font-medium rounded-[8px] transition-colors shadow-lg hover:shadow-xl transform hover:translate-y-1 flex items-center justify-center cursor-not-allowed pointer-events-none"
                 >
                   <div className="flex gap-1 h-7">
@@ -76,7 +77,8 @@ export default function Footer() {
                   </div>
                 </Link>
                 <Link
-                  href="/"
+                  href="https://play.google.com/store/apps/details?id=com.runnarsapp.mobile"
+                  target="_blank"
                   className="w-[150px] px-4 py-2 bg-[#ffffff] text-[#1B1E21] font-medium rounded-[8px] transition-colors shadow-lg hover:shadow-xl transform hover:translate-y-1 flex items-center justify-center cursor-not-allowed pointer-events-none"
                 >
                   <div className="flex gap-1 h-7">

@@ -6,7 +6,7 @@ import { motion, AnimatePresence, Variants } from "framer-motion";
 import Install from "./Install";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css"
+// import "swiper/css"
 
 const steps = [
   {

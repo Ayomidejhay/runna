@@ -27,7 +27,8 @@ export default function CTA() {
 
           <div className="flex items-center justify-center space-x-6">
             <Link
-              href=""
+              href="https://apps.apple.com/us/app/runnars-app/id6759202549"
+              target="_blank"
               className="bg-[#ffffff] text-[#1B1E21] w-40 flex items-center justify-center h-11 font-medium rounded-[8px] transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 cursor-not-allowed pointer-events-none"
             >
               <div className="flex gap-1 h-7">
@@ -44,7 +45,8 @@ export default function CTA() {
               </div>
             </Link>
             <Link
-              href=""
+              href="https://play.google.com/store/apps/details?id=com.runnarsapp.mobile"
+              target="_blank"
               className="bg-[#ffffff] w-40 flex items-center justify-center h-11 text-[#1B1E21] font-medium rounded-[8px] transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 cursor-not-allowed pointer-events-none"
             >
               <div className="flex gap-1 h-7">

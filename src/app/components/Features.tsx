@@ -93,21 +93,22 @@ export default function Features() {
           </p>
         </div>
         <div className="flex-1 hidden lg:flex flex-col gap-5 items-center lg:items-end">
-          {/* <Link
-            className="bg-[#1570EF] py-3 px-5 w-full md:w-82.5 text-[#ffffff] rounded-[24px] text-center"
-            href="/signup"
-          >
-            Get Started For <span className="font-bold">FREE</span>
-          </Link> */}
           <Link
             className="bg-[#1570EF] py-3 px-5 w-full md:w-82.5 text-[#ffffff] rounded-[24px] text-center"
             href="#"
           >
-            Coming <span className="font-bold">SOON...</span>
+            Get Started For <span className="font-bold">FREE</span>
           </Link>
+          {/* <Link
+            className="bg-[#1570EF] py-3 px-5 w-full md:w-82.5 text-[#ffffff] rounded-[24px] text-center"
+            href="#"
+          >
+            Coming <span className="font-bold">SOON...</span>
+          </Link> */}
           <div className="flex items-center justify-center gap-4">
             <Link
-              href=""
+              href="https://apps.apple.com/us/app/runnars-app/id6759202549"
+              target="_blank"
               className="w-40 h-11 flex items-center justify-center bg-[#000000] text-[#ffffff] font-medium rounded-[8px] transition-colors shadow-lg hover:shadow-xl transform hover:translate-y-1"
             >
               <div className="flex gap-2 h-7">
@@ -124,7 +125,8 @@ export default function Features() {
               </div>
             </Link>
             <Link
-              href=""
+              href="https://play.google.com/store/apps/details?id=com.runnarsapp.mobile"
+              target="_blank"
               className="w-40 flex items-center justify-center h-11 bg-[#000000] text-[#ffffff] font-medium rounded-[8px] transition-colors shadow-lg hover:shadow-xl transform hover:translate-y-1"
             >
               <div className="flex gap-2 h-7">

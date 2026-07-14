@@ -76,26 +76,15 @@ export default function Hero() {
               transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
               className="bg-[#1570EF] w-full  md:w-82.5 flex items-center justify-center h-11 mx-auto rounded-[24px] text-white font-medium text-[15px] mb-[32px]"
             >
-              {/* <Link href="/signup">
+              <Link href="/signup">
                 Get Started For <span className="font-bold">FREE</span>
-              </Link> */}
-              <Link href="#">
+              </Link> 
+               {/* <Link href="#">
                 Coming <span className="font-bold">SOON...</span>
-              </Link>
-            </motion.div>
+              </Link> */}
+            </motion.div> 
 
             {/* App Store Info */}
-            {/* <motion.div
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 }}
-              className="text-white text-[12px] mb-[16px]"
-            >
-              Available on iOS and Android
-            </motion.div> */}
-
             <motion.div
               variants={{
                 hidden: { opacity: 0, y: 20 },
@@ -104,8 +93,19 @@ export default function Hero() {
               transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 }}
               className="text-white text-[12px] mb-[16px]"
             >
-              Follow us on social media
+              Available on iOS and Android
             </motion.div>
+
+            {/* <motion.div
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 }}
+              className="text-white text-[12px] mb-[16px]"
+            >
+              Follow us on social media
+            </motion.div> */}
 
             {/* App Store Buttons */}
             <motion.div
@@ -115,8 +115,9 @@ export default function Hero() {
               transition={{ delay: 0.6, duration: 0.6 }}
             >
               {/* Apple Store */}
-              {/*<Link
-                href=""
+              <Link
+                href="https://apps.apple.com/us/app/runnars-app/id6759202549"
+                target="_blank"
                 className="bg-white text-[#1B1E21] w-full md:w-40 flex items-center justify-center h-11 font-medium rounded-[8px] transition-shadow shadow-lg hover:shadow-xl transform hover:translate-y-1"
               >
                 <div className="flex gap-1 h-7">
@@ -131,11 +132,12 @@ export default function Hero() {
                     <p className="text-[15px] font-bold">App Store</p>
                   </span>
                 </div>
-              </Link>*/}
+              </Link>
 
               {/* Google Play */}
-              {/* <Link
-                href=""
+              <Link
+                href="https://play.google.com/store/apps/details?id=com.runnarsapp.mobile"
+                target="_blank"
                 className="bg-white w-full md:w-40 flex items-center justify-center h-11 text-[#1B1E21] font-medium rounded-[8px] transition-shadow shadow-lg hover:shadow-xl transform hover:translate-y-1"
               >
                 <div className="flex gap-1 h-7">
@@ -150,37 +152,11 @@ export default function Hero() {
                     <p className="text-[15px] font-bold">Google Play</p>
                   </span>
                 </div>
-              </Link> */}
-
-              <Link
-                href="https://www.instagram.com/runnarspet?igsh=MWt6bDRhNXBiMG9uYw=="
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transition-transform transform hover:scale-110 hover:shadow-lg cursor-pointer"
-              >
-                <Image
-                  src="/instagram.png"
-                  alt="instagram"
-                  width={32}
-                  height={32}
-                  className="rounded-md"
-                />
               </Link>
 
-              <Link
-                href="https://www.facebook.com/profile.php?id=100078407485911"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transition-transform transform hover:scale-110 hover:shadow-lg cursor-pointer"
-              >
-                <Image
-                  src="/facebook.png"
-                  alt="facebook"
-                  width={32}
-                  height={32}
-                  className="rounded-md"
-                />
-              </Link>
+             
+
+              
 
               {/* <Link
                 href="https://x.com/runnarsapp?s=21"

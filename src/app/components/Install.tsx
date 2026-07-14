@@ -8,18 +8,19 @@ export default function Install() {
       <div className="flex flex-col items-center justify-center   mx-auto gap-6 py-10">
         {/* Section 1: Get Started Button */}
         <div className="bg-[#1570EF] text-white flex items-center justify-center h-11 rounded-[24px] w-full  md:w-82.5">
-          {/* <Link href="/signup" className="px-6 text-center w-full ">
-            Get Started For <span className="font-bold">FREE</span>
-          </Link> */}
           <Link href="#" className="px-6 text-center w-full ">
-            Coming <span className="font-bold">SOON...</span>
+            Get Started For <span className="font-bold">FREE</span>
           </Link>
+          {/* <Link href="#" className="px-6 text-center w-full ">
+            Coming <span className="font-bold">SOON...</span>
+          </Link> */}
         </div>
 
         {/* Section 2: App Store Buttons (Side by side) */}
          <div className="flex flex-row justify-center items-center gap-4 w-full">
           <Link
-            href=""
+            href="https://apps.apple.com/us/app/runnars-app/id6759202549"
+            target="_blank"
             className="w-full md:w-40 flex items-center justify-center h-11 bg-black text-white font-medium rounded-[8px] transition shadow-lg hover:shadow-xl transform hover:translate-y-1 cursor-not-allowed pointer-events-none"
           >
             <div className="flex gap-2 h-7">
@@ -37,7 +38,8 @@ export default function Install() {
           </Link>
 
           <Link
-            href=""
+            href="https://play.google.com/store/apps/details?id=com.runnarsapp.mobile"
+            target="_blank"
             className="w-full md:w-40 flex items-center justify-center h-11 bg-black text-white font-medium rounded-[8px] transition shadow-lg hover:shadow-xl transform hover:translate-y-1 cursor-not-allowed pointer-events-none"
           >
             <div className="flex gap-2 h-7">

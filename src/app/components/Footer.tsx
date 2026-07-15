@@ -61,7 +61,7 @@ export default function Footer() {
                 <Link
                   href="https://apps.apple.com/us/app/runnars-app/id6759202549"
                   target="_blank"
-                  className="px-4 py-2 w-[150px] bg-[#ffffff] text-[#1B1E21] font-medium rounded-[8px] transition-colors shadow-lg hover:shadow-xl transform hover:translate-y-1 flex items-center justify-center cursor-not-allowed pointer-events-none"
+                  className="px-4 py-2 w-[150px] bg-[#ffffff] text-[#1B1E21] font-medium rounded-[8px] transition-colors shadow-lg hover:shadow-xl transform hover:translate-y-1 flex items-center justify-center "
                 >
                   <div className="flex gap-1 h-7">
                     <Image
@@ -79,7 +79,7 @@ export default function Footer() {
                 <Link
                   href="https://play.google.com/store/apps/details?id=com.runnarsapp.mobile"
                   target="_blank"
-                  className="w-[150px] px-4 py-2 bg-[#ffffff] text-[#1B1E21] font-medium rounded-[8px] transition-colors shadow-lg hover:shadow-xl transform hover:translate-y-1 flex items-center justify-center cursor-not-allowed pointer-events-none"
+                  className="w-[150px] px-4 py-2 bg-[#ffffff] text-[#1B1E21] font-medium rounded-[8px] transition-colors shadow-lg hover:shadow-xl transform hover:translate-y-1 flex items-center justify-center"
                 >
                   <div className="flex gap-1 h-7">
                     <Image

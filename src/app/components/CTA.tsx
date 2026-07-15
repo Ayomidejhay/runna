@@ -29,7 +29,7 @@ export default function CTA() {
             <Link
               href="https://apps.apple.com/us/app/runnars-app/id6759202549"
               target="_blank"
-              className="bg-[#ffffff] text-[#1B1E21] w-40 flex items-center justify-center h-11 font-medium rounded-[8px] transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 cursor-not-allowed pointer-events-none"
+              className="bg-[#ffffff] text-[#1B1E21] w-40 flex items-center justify-center h-11 font-medium rounded-[8px] transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 "
             >
               <div className="flex gap-1 h-7">
                 <Image
@@ -47,7 +47,7 @@ export default function CTA() {
             <Link
               href="https://play.google.com/store/apps/details?id=com.runnarsapp.mobile"
               target="_blank"
-              className="bg-[#ffffff] w-40 flex items-center justify-center h-11 text-[#1B1E21] font-medium rounded-[8px] transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 cursor-not-allowed pointer-events-none"
+              className="bg-[#ffffff] w-40 flex items-center justify-center h-11 text-[#1B1E21] font-medium rounded-[8px] transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 "
             >
               <div className="flex gap-1 h-7">
                 <Image

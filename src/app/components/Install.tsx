@@ -21,7 +21,7 @@ export default function Install() {
           <Link
             href="https://apps.apple.com/us/app/runnars-app/id6759202549"
             target="_blank"
-            className="w-full md:w-40 flex items-center justify-center h-11 bg-black text-white font-medium rounded-[8px] transition shadow-lg hover:shadow-xl transform hover:translate-y-1 cursor-not-allowed pointer-events-none"
+            className="w-full md:w-40 flex items-center justify-center h-11 bg-black text-white font-medium rounded-[8px] transition shadow-lg hover:shadow-xl transform hover:translate-y-1 "
           >
             <div className="flex gap-2 h-7">
               <Image
@@ -40,7 +40,7 @@ export default function Install() {
           <Link
             href="https://play.google.com/store/apps/details?id=com.runnarsapp.mobile"
             target="_blank"
-            className="w-full md:w-40 flex items-center justify-center h-11 bg-black text-white font-medium rounded-[8px] transition shadow-lg hover:shadow-xl transform hover:translate-y-1 cursor-not-allowed pointer-events-none"
+            className="w-full md:w-40 flex items-center justify-center h-11 bg-black text-white font-medium rounded-[8px] transition shadow-lg hover:shadow-xl transform hover:translate-y-1 "
           >
             <div className="flex gap-2 h-7">
               <Image

@@ -162,8 +162,6 @@ export default function LoadingScreen() {
     }
   }, [isScrollLocked]);
 
-  if (!isMounted) return null;
-
   return (
     <AnimatePresence>
       {shouldRender && (
@@ -225,20 +223,23 @@ export default function LoadingScreen() {
               Wellness for You. Wellness for Your Pet.
             </motion.p>
 
-            {/* Progress Bar */}
-            <div className="w-full bg-[#111c2e] rounded-full h-1 overflow-hidden mb-3 border border-brightblue/10">
+            {/* Rolling Spinner */}
+            <div className="relative w-14 h-14 mb-5 flex items-center justify-center">
+              {/* Spinning ring */}
               <motion.div
-                className="h-full bg-gradient-to-r from-brightblue to-blue-400 rounded-full shadow-[0_0_8px_rgba(21,112,239,0.8)]"
-                initial={{ width: 0 }}
-                animate={{ width: `${progress}%` }}
-                transition={{ duration: 0.1, ease: "easeOut" }}
+                className="absolute inset-0 rounded-full border-2 border-brightblue/10 border-t-brightblue filter drop-shadow-[0_0_8px_rgba(21,112,239,0.5)]"
+                animate={{ rotate: 360 }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 0.8,
+                  ease: "linear",
+                }}
               />
             </div>
 
-            {/* Percentage & Status text */}
-            <div className="flex justify-between w-full text-[10px] text-gray uppercase tracking-wider font-semibold">
-              <span>{progress < 100 ? "Loading assets" : "Ready"}</span>
-              <span className="text-white">{progress}%</span>
+            {/* Status text */}
+            <div className="text-[10px] text-gray uppercase tracking-widest font-semibold">
+              {progress < 100 ? "Loading assets" : "Ready"}
             </div>
           </div>
         </motion.div>

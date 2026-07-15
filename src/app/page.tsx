@@ -1,12 +1,12 @@
-import Image from "next/image";
+import dynamic from "next/dynamic";
 import Hero from "./components/Hero";
-import HowItWorks from "./components/HowItWorks";
-import Features from "./components/Features";
-import EarnRewards from "./components/EarnRewards";
-import CTA from "./components/CTA";
-import Footer from "./components/Footer";
-import WellnessCardsSection from "./components/WellnessCardsSection";
-import Faq from "./components/Faq";
+
+const WellnessCardsSection = dynamic(() => import("./components/WellnessCardsSection"));
+const HowItWorks = dynamic(() => import("./components/HowItWorks"));
+const Features = dynamic(() => import("./components/Features"));
+const EarnRewards = dynamic(() => import("./components/EarnRewards"));
+const Faq = dynamic(() => import("./components/Faq"));
+const CTA = dynamic(() => import("./components/CTA"));
 
 export default function Home() {
   return (

@@ -11,14 +11,14 @@ export default function Hero() {
       <div className="relative flex" style={{ height: "calc(100vh - 80px)" }}>
         {/* Background image */}
         <Image
-          src="/hero.png"
+          src="/hero.webp"
           alt="Hero Background"
           layout="fill"
           objectFit="cover"
           quality={80}
           priority={true}
           className="z-0"
-          
+          data-loader-critical="true"
         />
 
         {/* Overlay */}

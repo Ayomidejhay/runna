@@ -28,8 +28,8 @@ export default function LoadingScreen() {
     const checkImages = () => {
       if (isDone) return;
 
-      // Scan all images in the DOM
-      const allImgs = Array.from(document.querySelectorAll("img"));
+      // Scan only critical images in the DOM
+      const allImgs = Array.from(document.querySelectorAll<HTMLImageElement>("img[data-loader-critical='true']"));
       
       // Filter only images that have a valid src and are not inline data URIs
       const imgs = allImgs.filter((img) => {

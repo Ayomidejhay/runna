@@ -35,7 +35,7 @@ export default function Navbar() {
           {/* Logo */}
           <div>
             <Link href="/" onClick={() => setMobileMenuOpen(false)}>
-              <Image src="/logohome.png" width={64} height={40} alt="logo" />
+              <Image src="/logohome.png" width={64} height={40} alt="logo" data-loader-critical="true" />
             </Link>
           </div>
 

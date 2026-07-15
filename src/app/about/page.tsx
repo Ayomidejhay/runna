@@ -12,7 +12,7 @@ const page = () => {
           header="More Than an App — A Movement for Pet Wellness"
           headerClassName="text-3xl lg:text-5xl"
           text="We’re reimagining how pet owners build healthy habits with their animals — through simple routines, fun challenges, and a community that celebrates every small win."
-          imageSrc="/about-one.png"
+          imageSrc="/about-one.webp"
           imageAlt="about"
           flexDirection="flex-row"
         />
@@ -21,7 +21,7 @@ const page = () => {
           header="Where We're Headed"
           headerClassName="text-3xl"
           text="A world where pets and their humans thrive through connected, joyful, and healthy everyday moments."
-          imageSrc="/about-two.png"
+          imageSrc="/about-two.webp"
           imageAlt="about"
           flexDirection="flex-row-reverse"
         />
@@ -30,7 +30,7 @@ const page = () => {
           header="Why We Exist"
           headerClassName="text-3xl"
           text="To inspire better wellness habits for pets and their humans through fun, goal-driven challenges that strengthen bonds, encourage movement, and build thriving communities."
-          imageSrc="/about-three.png"
+          imageSrc="/about-three.webp"
           imageAlt="about"
           flexDirection="flex-row"
         />
@@ -39,7 +39,7 @@ const page = () => {
           header="What We Stand For"
           headerClassName="text-3xl"
           text="Integrity, joy, care, innovation, and connection — the compass that guides every product, challenge, and interaction on our platform."
-          imageSrc="/about-four.png"
+          imageSrc="/about-four.webp"
           imageAlt="about"
           flexDirection="flex-row-reverse"
         />
@@ -48,7 +48,7 @@ const page = () => {
           header="How It All Began"
           headerClassName="text-3xl"
           text="Born from a love for pets and the pursuit of meaningful wellness, we set out to make every walk, challenge, and connection count."
-          imageSrc="/about-five.png"
+          imageSrc="/about-five.webp"
           imageAlt="about"
           flexDirection="flex-row"
         />

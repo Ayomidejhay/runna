@@ -2,6 +2,19 @@
   for = "/.well-known/apple-app-site-association"
   [headers.values]
     Content-Type = "application/json"
+
+# Android App Links and iOS Universal Links intercept these URLs before the
+# browser loads them when Runnars is installed. Otherwise, serve the smart
+# fallback page, which sends mobile visitors to their platform's app store.
+[[redirects]]
+  from = "/post/*"
+  to = "/open-app"
+  status = 200
+
+[[redirects]]
+  from = "/challenge/*"
+  to = "/open-app"
+  status = 200
     Cache-Control = "max-age=0, no-cache, no-store, must-revalidate"
 
 [[headers]]

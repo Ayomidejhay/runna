@@ -2,23 +2,45 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function Hero() {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  // Track the scroll of the Hero section relative to the viewport
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"],
+  });
+
+  // Map scroll progress to scale and y translation for parallax depth
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "12%"]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.05]);
+
   return (
-    <div>
-      <div className="relative flex" style={{ height: "calc(100vh - 80px)" }}>
-        {/* Background image */}
-        <Image
-          src="/hero.webp"
-          alt="Hero Background"
-          layout="fill"
-          objectFit="cover"
-          quality={80}
-          priority={true}
-          className="z-0"
-        />
+    <div ref={containerRef}>
+      <div className="relative flex overflow-hidden" style={{ height: "calc(100vh - 80px)" }}>
+        {/* Background image container with animations */}
+        <div className="absolute inset-0 z-0 w-full h-full overflow-hidden">
+          <motion.div style={{ y, scale }} className="relative w-full h-full">
+            <motion.div
+              initial={{ opacity: 0, scale: 1.1 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1.8, ease: [0.16, 1, 0.3, 1] }}
+              className="relative w-full h-full"
+            >
+              <Image
+                src="/hero.webp"
+                alt="Hero Background"
+                layout="fill"
+                objectFit="cover"
+                quality={80}
+                priority={true}
+              />
+            </motion.div>
+          </motion.div>
+        </div>
 
         {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/60 z-10" />
